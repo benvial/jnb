@@ -14,7 +14,7 @@ RUN chown -R ${USER} ${HOME} && \
     chmod +x ${HOME}/tutorials/*.sh
 USER ${USER}
 
-RUN pip install --no-cache-dir RISE
+RUN pip install --user --no-cache-dir RISE
 
 
 # Pre-exec notebooks to improve first-use start time
