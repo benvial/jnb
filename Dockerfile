@@ -12,10 +12,14 @@ COPY . ${HOME}
 USER root
 RUN chown -R ${USER} ${HOME} && \
     chmod +x ${HOME}/tutorials/*.sh
+
+# Install Python dependencies for the Python visualization and tutorial notebooks
+RUN pip install "matplotlib"
+RUN pip install "pytest"
+RUN pip install "jupyter_contrib_nbextensions"
+RUN pip install "RISE"
+
 USER ${USER}
-
-RUN pip install --user --no-cache-dir RISE
-
 
 # Pre-exec notebooks to improve first-use start time
 WORKDIR ${HOME}/tutorials
