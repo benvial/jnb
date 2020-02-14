@@ -14,6 +14,9 @@ RUN chown -R ${USER} ${HOME} && \
     chmod +x ${HOME}/tutorials/*.sh
 USER ${USER}
 
+RUN pip install --no-cache-dir RISE
+
+
 # Pre-exec notebooks to improve first-use start time
 WORKDIR ${HOME}/tutorials
 RUN ./prebuild.sh

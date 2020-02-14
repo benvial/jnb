@@ -1,0 +1,10 @@
+{
+  "NotebookApp": {
+    "nbserver_extensions": {
+      "nb_conda": true,
+      "jupyter_nbextensions_configurator": true,
+      "hide_code": true
+    },
+    "password": "sha1:8d0f48b73b28:4dc066fb6be06eb64efc8cc87f2c7c29d3308b07"
+  }
+}
