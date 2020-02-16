@@ -15,12 +15,7 @@ RUN chown -R ${USER} ${HOME} && \
 
 # Install Python dependencies for the Python visualization and tutorial notebooks
 
-RUN pip install "numpy"
-RUN pip install "matplotlib"
-RUN pip install "seaborn"
-RUN pip install "pytest"
-RUN pip install "jupyter_contrib_nbextensions"
-RUN pip install "RISE"
+RUN pip install -r requirements.txt
 
 USER ${USER}
 
