@@ -10,13 +10,14 @@ ENV IQSHARP_HOSTING_ENV=CODE_TUTORIALS
 # Required for mybinder.org
 COPY . ${HOME}
 USER root
-RUN chown -R ${USER} ${HOME} && \
-    chmod +x ${HOME}/tutorials/*.sh
 
 # Install Python dependencies for the Python visualization and tutorial notebooks
 
 RUN pip install -r requirements.txt
 
+RUN chown -R ${USER} ${HOME} && \
+    chmod +x ${HOME}/tutorials/*.sh
+    
 USER ${USER}
 
 # Pre-exec notebooks to improve first-use start time
