@@ -3,6 +3,7 @@
 # installed for us.
 FROM mcr.microsoft.com/quantum/iqsharp-base:0.10.1911.1607
 
+
 # Add metadata indicating that this image is used for the QC book samples.
 ENV IQSHARP_HOSTING_ENV=CODE_TUTORIALS
 
